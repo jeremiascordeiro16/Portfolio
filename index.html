@@ -7,19 +7,20 @@
 
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
+<!-- FONDO ESTRELLADO -->
+<canvas id="stars"></canvas>
+
 <!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top glass">
   <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Jeremías</a>
+    <a class="navbar-brand fw-bold" href="#">🚀 Jeremías</a>
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -35,12 +36,22 @@
 
 <!-- HERO -->
 <header class="hero">
-  <div class="container text-center">
-    <h1 class="animate">Jeremías Cordeiro</h1>
-    <p class="lead animate delay">Desarrollador Full Stack</p>
-    <a href="#projects" class="btn btn-primary btn-lg mt-3 animate delay2">
-      Ver proyectos
-    </a>
+  <div class="container hero-content">
+    
+    <div class="profile">
+      <img src="assets/foto-perfil.jpeg" alt="Foto de perfil">
+    </div>
+
+    <h1 class="glow">Jeremías Cordeiro</h1>
+    <p class="subtitle">Desarrollador Full Stack</p>
+
+    <div class="hero-buttons">
+      <a href="#projects" class="btn btn-primary btn-lg">Ver proyectos</a>
+      <a href="assets/cv.pdf" class="btn btn-outline-light btn-lg" target="_blank">
+        Descargar CV
+      </a>
+    </div>
+
   </div>
 </header>
 
@@ -49,73 +60,180 @@
   <div class="container">
     <h2 class="section-title">Sobre mí</h2>
     <p class="text-center">
-      Desarrollador orientado a aplicaciones web y sistemas de gestión.
-      Experiencia en frontend, backend y bases de datos.
-      Me enfoco en crear soluciones reales, escalables y bien estructuradas.
+      Desarrollo sistemas web y aplicaciones full stack orientadas a resolver
+      problemas reales. Me especializo en backend, bases de datos y arquitectura
+      de software, con foco en soluciones escalables.
     </p>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section bg-light">
-  <div class="container">
-    <h2 class="section-title">Proyectos</h2>
+<section id="projects" class="projects">
+  <h2>Proyectos</h2>
 
-    <div class="row g-4">
+  <div class="projects-grid">
+    <div class="project-card">
+      <h3>Sistema de Gestión</h3>
 
-      <div class="col-md-4">
-        <div class="project-card">
-          <h5>Sistema de Gestión de Kiosco</h5>
-          <p>Control de stock, ventas, roles y reportes.</p>
-          <span class="tech">PHP · MySQL · Bootstrap</span>
-          <div class="links">
-            <a href="#" target="_blank">GitHub</a>
-            <a href="#" target="_blank">Demo</a>
-          </div>
-        </div>
+      <img src="img/proyecto1.jpg" alt="Sistema de Gestión" class="project-img" />
+
+      <p>Aplicación web para gestión de stock, ventas y usuarios.</p>
+
+      <div class="project-tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
       </div>
 
-      <div class="col-md-4">
-        <div class="project-card">
-          <h5>Sistema Documental</h5>
-          <p>Gestión de documentos con subida de archivos.</p>
-          <span class="tech">PHP · MySQL · JS</span>
-          <div class="links">
-            <a href="#" target="_blank">GitHub</a>
-          </div>
-        </div>
+      <div class="project-links">
+        <a href="#" target="_blank">Demo</a>
+        <a href="#" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Software Aguateros</h3>
+
+      <img src="img/proyecto1.jpg" alt="Sistema de Gestión" class="project-img" />
+
+      <p>Plataforma para gestión de pedidos y clientes.</p>
+
+      <div class="project-tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
       </div>
 
-      <div class="col-md-4">
-        <div class="project-card">
-          <h5>Software para Aguateros</h5>
-          <p>Clientes, pedidos y reparto.</p>
-          <span class="tech">Python · API · MySQL</span>
-          <div class="links">
-            <a href="#" target="_blank">GitHub</a>
-          </div>
-        </div>
+      <div class="project-links">
+        <a href="#" target="_blank">Demo</a>
+        <a href="#" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Gestión Documental</h3>
+
+      <img src="img/proyecto1.jpg" alt="Sistema de Gestión" class="project-img" />
+
+      <p>Sistema para entrada y salida de documentos municipales.</p>
+
+      <div class="project-tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+      </div>
+  
+      <div class="project-links">
+        <a href="#" target="_blank">Demo</a>
+        <a href="#" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Quipu Books</h3>
+
+      <img src="img/proyecto1.jpg" alt="Sistema de Gestión" class="project-img" />
+      
+      <p>Sitio web ecommerce con productos y servicios.</p>
+
+      <div class="project-tech">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
       </div>
 
+      <div class="project-links">
+        <a href="#" target="_blank">Demo</a>
+        <a href="#" target="_blank">GitHub</a>
+      </div>
     </div>
   </div>
 </section>
+
+
+<section id="skills" class="skills">
+  <h2>Skills</h2>
+
+  <div class="skills-icons">
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
+      <span>HTML5</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
+      <span>CSS3</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
+      <span>JavaScript</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+      <span>React</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+      <span>Node.js</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" />
+      <span>PHP</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" />
+      <span>Python</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" />
+      <span>MySQL</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" />
+      <span>Git</span>
+    </div>
+
+    <div class="skill">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+      <span>GitHub</span>
+    </div>
+  </div>
+</section>
+
 
 <!-- CONTACT -->
 <section id="contact" class="section">
   <div class="container text-center">
     <h2 class="section-title">Contacto</h2>
-    <p>Email: <strong>jeremias@email.com</strong></p>
+
+    <p>jeremiascordeiro16@gmail.com</p>
 
     <div class="socials">
-      <a href="#" target="_blank"><i class="bi bi-github"></i></a>
-      <a href="#" target="_blank"><i class="bi bi-linkedin"></i></a>
+      <a href="https://github.com/jeremiascordeiro16"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/jeremias-cordeiro-4b4263267/"><i class="bi bi-linkedin"></i></a>
+      <a href="https://instagram.com/jerecordeiro"><i class="bi bi-instagram"></i></a>
+      <a href="https://wa.me/5493644565925"><i class="bi bi-whatsapp"></i></a>
     </div>
   </div>
 </section>
 
 <footer class="footer">
-  <p>© 2026 Jeremías Cordeiro</p>
+  © 2026 Jeremías Cordeiro
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
