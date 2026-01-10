@@ -256,3 +256,21 @@ canvas#stars {
   height: 26px;
 }
 
+@media (max-width: 600px) {
+  .contact-item {
+    padding: 8px 10px;
+    gap: 8px;
+    border-radius: 12px;
+  }
+
+  .contact-item span {
+    font-size: 0.85rem;
+  }
+
+  .contact-item img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
